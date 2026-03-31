@@ -20,4 +20,10 @@ describe ('App', () => {
     fireEvent.click(button)
     expect(screen.findByText('There have been 2 events')).toBeDefined()
   })
+
+  it('handles input change events', () => {
+    const input = screen.getByRole('textbox')
+    fireEvent.change(input, {target: {value: 'testinput'}})
+    expect(screen.findByText('You typed: testinput')).toBeDefined()
+  })
 })
