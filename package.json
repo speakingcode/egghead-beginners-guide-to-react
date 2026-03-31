@@ -11,7 +11,19 @@
   "type": "commonjs",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "start": "webpack-dev-server --content-base src",
+    "test": "jest",
+    "test:watch": "npm run test -- --watchAll",
+    "build": "NODE_ENV=production webpack && cp src/index.html dist/index.html"
+  },
+  "babel": {
+    "presets": [
+      "@babel/preset-env",
+      "@babel/preset-react"
+    ],
+    "plugins": [
+      "@babel/plugin-transform-object-rest-spread"
+    ]
   },
   "devDependencies": {
     "@babel/core": "^7.29.0",
@@ -27,5 +39,9 @@
     "webpack": "^5.105.4",
     "webpack-cli": "^7.0.2",
     "webpack-dev-server": "^5.2.3"
+  },
+  "dependencies": {
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4"
   }
 }
