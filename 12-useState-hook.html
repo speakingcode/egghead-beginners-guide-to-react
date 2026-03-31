@@ -13,10 +13,12 @@
             <label htmlFor="name">Name: </label>
             <input id="name" onChange={handleChange} />
           </form>
-          Please type your name
+          {name ? <strong>Hello {name}</strong> : 'Please type your name'}
         </div>
       )
     }
+
+    ReactDOM.render(<Greeting />, document.getElementById('root'))
   </script>
 </body>
 
