@@ -1,0 +1,28 @@
+{
+  "name": "egghead-beginners-guide-to-react",
+  "version": "1.0.0",
+  "description": "A fuller implementation of egghead.io Beginners Guide To React by Kent C Dodds with modules, unit testing, etc",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com-speakingcode:speakingcode/egghead-beginners-guide-to-react.git"
+  },
+  "license": "ISC",
+  "author": "speakingcode",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.29.0",
+    "@babel/plugin-transform-object-rest-spread": "^7.28.6",
+    "@babel/preset-env": "^7.29.2",
+    "@babel/preset-react": "^7.28.5",
+    "babel-loader": "^10.1.1",
+    "jest": "^30.3.0",
+    "react-test-renderer": "^19.2.4",
+    "webpack": "^5.105.4",
+    "webpack-cli": "^7.0.2",
+    "webpack-dev-server": "^5.2.3"
+  }
+}
