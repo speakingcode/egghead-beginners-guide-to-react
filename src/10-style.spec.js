@@ -21,7 +21,6 @@ describe('element', () => {
   it('renders the correct styles', () => {
     render(element)
     const smallBlueBox = screen.getByText('small lightblue box')
-    console.log(smallBlueBox)
     expect(smallBlueBox.style.backgroundColor).toBe('lightblue')
     expect(smallBlueBox.style.fontStyle).toBe('italic')
 
