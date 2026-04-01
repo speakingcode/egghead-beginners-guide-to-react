@@ -7,14 +7,28 @@ module.exports = {
     './src/index.js'
   ],
   module : {
-    rules: [{
-      test: /\.jsx?$/,
-      exclude: /node_modules/,
-      use: [
-        'react-hot-loader/webpack',
-        'babel-loader'
-      ]
-    }]
+    rules: [
+      {
+        test: /\.jsx?$/,
+        exclude: /node_modules/,
+        use: [
+          'react-hot-loader/webpack',
+          'babel-loader'
+        ]
+      },
+      {
+        test: /\.css$/i,
+        loader: 'style-loader'
+      },
+      {
+        test: /\.module.css$/,
+        loader: 'css-loader',
+        options: {
+          modules: true,
+          localIdentName: '[name]__[local]___[hash:base64:5]',
+        },
+      }
+    ]
   },
   resolve: {
     extensions: ['.js', '.jsx']
@@ -25,7 +39,7 @@ module.exports = {
     filename   : 'bundle.js'
   },
   devServer : {
-    contentBase : './dist',
+    static: './dist',
     hot: true
   },
   plugins: [
