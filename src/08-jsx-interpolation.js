@@ -1,6 +1,6 @@
 import React from 'react'
 
-export function CharacterCount({text}) {
+export const CharacterCount = ({text}) => {
   return (
     <div>
       {`The text "${text}" has `}

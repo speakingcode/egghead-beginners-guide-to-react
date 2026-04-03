@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-export function SayHello({firstName, lastName}) {
+export const SayHello = ({firstName, lastName}) => {
   return (
     <div>
       Hello {firstName} {lastName}!

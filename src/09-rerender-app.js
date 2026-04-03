@@ -1,6 +1,6 @@
 import React from 'react'
 
-export function tick() {
+export const tick = () => {
   const time = new Date().toLocaleTimeString()
 
   return (
